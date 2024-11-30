@@ -1,0 +1,56 @@
+.error-card {
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.error-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.error-severity-high {
+    border-left: 4px solid #dc3545;
+}
+
+.error-severity-medium {
+    border-left: 4px solid #ffc107;
+}
+
+.error-severity-low {
+    border-left: 4px solid #28a745;
+}
+
+.error-timestamp {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.error-resolution {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.stack-trace {
+    font-family: monospace;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    white-space: pre-wrap;
+}
+
+.error-filters {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.resolved-badge {
+    background-color: #28a745;
+}
+
+.open-badge {
+    background-color: #dc3545;
+}

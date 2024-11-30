@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+    <items>
+        <item>
+            <title>Смартфон</title>
+            <description>Новый смартфон</description>
+            <price>0</price>
+            <discount>10</discount>
+        </item>
+        <item>
+            <title>Ноутбук Premium X1 Carbon 14" 16GB RAM 512GB SSD</title>
+            <description>Профессиональный ноутбук для бизнеса с процессором Intel Core i7 11-го поколения, 16ГБ оперативной памяти, 512ГБ SSD накопителем и 14-дюймовым IPS экраном с разрешением 2560x1440.</description>
+            <price>89999.99</price>
+            <discount>15</discount>
+        </item>
+        <item>
+            <title>123</title>
+            <description>Краткое описание</description>
+            <price>abc</price>
+            <discount>150</discount>
+        </item>
+    </items>
+</feed>

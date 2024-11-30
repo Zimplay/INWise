@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справка по ошибкам - Error Tracking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Error Tracking System</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Главная</a>
+                <a class="nav-link active" href="/help.html">Справка</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Справка по типичным ошибкам</h1>
+        
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="accordion" id="errorAccordion">
+                    <!-- Ценовые ошибки -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="priceError">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#priceErrorContent">
+                                Цена товара некорректна для заданной категории
+                            </button>
+                        </h2>
+                        <div id="priceErrorContent" class="accordion-collapse collapse show" data-bs-parent="#errorAccordion">
+                            <div class="accordion-body">
+                                <h5>Описание:</h5>
+                                <p>Цена товара выходит за допустимые пределы для данной категории товаров.</p>
+                                <h5>Возможные причины:</h5>
+                                <ul>
+                                    <li>Ошибка при вводе цены (лишние нули или пропущенные разряды)</li>
+                                    <li>Неправильно выбрана категория товара</li>
+                                    <li>Цена значительно отличается от средней цены в категории</li>
+                                </ul>
+                                <h5>Как исправить:</h5>
+                                <ul>
+                                    <li>Проверить правильность введенной цены</li>
+                                    <li>Убедиться, что товар находится в правильной категории</li>
+                                    <li>Если цена корректна, но отличается от средней, добавить обоснование</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ошибки скидок -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="discountError">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#discountErrorContent">
+                                Скидка превышает 100% или указана с ошибкой
+                            </button>
+                        </h2>
+                        <div id="discountErrorContent" class="accordion-collapse collapse" data-bs-parent="#errorAccordion">
+                            <div class="accordion-body">
+                                <h5>Описание:</h5>
+                                <p>Указанная скидка имеет некорректное значение или превышает допустимый предел.</p>
+                                <h5>Возможные причины:</h5>
+                                <ul>
+                                    <li>Скидка указана в неправильном формате</li>
+                                    <li>Значение скидки превышает 100%</li>
+                                    <li>Скидка указана как абсолютное значение вместо процентов</li>
+                                </ul>
+                                <h5>Как исправить:</h5>
+                                <ul>
+                                    <li>Проверить формат указания скидки (должна быть в процентах)</li>
+                                    <li>Убедиться, что скидка не превышает максимально допустимое значение</li>
+                                    <li>При необходимости пересчитать скидку из абсолютного значения в проценты</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ошибки в описании -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="descriptionError">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#descriptionErrorContent">
+                                Ошибки в описании товара
+                            </button>
+                        </h2>
+                        <div id="descriptionErrorContent" class="accordion-collapse collapse" data-bs-parent="#errorAccordion">
+                            <div class="accordion-body">
+                                <h5>Описание:</h5>
+                                <p>В описании товара обнаружены ошибки, неточности или недостаточно информации.</p>
+                                <h5>Возможные причины:</h5>
+                                <ul>
+                                    <li>Орфографические или грамматические ошибки</li>
+                                    <li>Неполное описание характеристик товара</li>
+                                    <li>Противоречивая информация в описании</li>
+                                    <li>Отсутствие важных параметров товара</li>
+                                </ul>
+                                <h5>Как исправить:</h5>
+                                <ul>
+                                    <li>Проверить текст на наличие ошибок</li>
+                                    <li>Дополнить описание недостающими характеристиками</li>
+                                    <li>Убрать противоречивую информацию</li>
+                                    <li>Добавить все необходимые параметры товара</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ошибки в названии -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="titleError">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#titleErrorContent">
+                                Непривлекательное название товара
+                            </button>
+                        </h2>
+                        <div id="titleErrorContent" class="accordion-collapse collapse" data-bs-parent="#errorAccordion">
+                            <div class="accordion-body">
+                                <h5>Описание:</h5>
+                                <p>Название товара не соответствует стандартам или недостаточно информативно для покупателей.</p>
+                                <h5>Возможные причины:</h5>
+                                <ul>
+                                    <li>Слишком короткое или неинформативное название</li>
+                                    <li>Отсутствие ключевых характеристик в названии</li>
+                                    <li>Использование некорректных символов или сокращений</li>
+                                    <li>Название не соответствует правилам площадки</li>
+                                </ul>
+                                <h5>Как исправить:</h5>
+                                <ul>
+                                    <li>Добавить основные характеристики товара в название</li>
+                                    <li>Использовать правильные обозначения и термины</li>
+                                    <li>Придерживаться рекомендуемой структуры названия</li>
+                                    <li>Убрать лишние символы и некорректные сокращения</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
